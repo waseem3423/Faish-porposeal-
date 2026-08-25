@@ -19,13 +19,13 @@ export default function FloatingPetals() {
 
   useEffect(() => {
     const colors = [
-      '#F472B6', // pink-400
-      '#FB7185', // rose-400
-      '#F9A8D4', // pink-300
-      '#FDA4AF', // rose-300
-      '#FCE7F3', // pink-100
-      '#FECDD3', // rose-100
-      '#F43F5E', // rose-500
+      '#D0B6E1', // Komal's signature lilac/lavender
+      '#E6D7F1', // Soft lilac white
+      '#C49FD9', // Rich lilac
+      '#B384D0', // Deep pastel purple
+      '#FFFFFF', // Pure white
+      '#FAF5FF', // Ivory shimmer
+      '#7C3AED', // Royal violet touch
     ];
 
     const initialParticles: Particle[] = Array.from({ length: 26 }).map((_, i) => ({

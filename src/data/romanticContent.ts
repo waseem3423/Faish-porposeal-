@@ -104,6 +104,22 @@ export const ROMANTIC_SHAYARI: ShayariItem[] = [
   },
   {
     id: 'sh2',
+    urduText: 'تیرا دکھنا غنیمت ہے، تو کل ہو یا نہ ہو ساتھ\nتو میں آج دیکھ رہا ہوں تمہیں جی بھر کے',
+    romanUrdu: 'Tera dikhna ghanimat hai, tu kal ho ya na ho sath,\nTo main aaj dekh raha hoon tumhein jee bhar ke.',
+    englishMeaning: 'Just seeing you is a blessing; whether tomorrow holds certainty or not, today I look upon you with all my heart.',
+    poet: 'Fasih ki Nazar',
+    theme: 'Soulful Gaze'
+  },
+  {
+    id: 'sh3',
+    urduText: 'رب پوچھے گا مجھ سے جو روزِ محشر، کیا کیا اس دنیا میں برسوں رہ کر؟\nمیں کیسے کہوں گا اک عمر ہے گزاری، تجھ کو لکھتے رہے سب کو سہہ کر',
+    romanUrdu: 'Rabb poochay ga mujh se jo Roz-e-Mehshar, Kya kiya is duniya mein barson reh kar?\nMain kaise kahunga ek umar hai guzari, Tujh ko likhtay rahay sab ko seh kar.',
+    englishMeaning: 'When the Creator asks what I accomplished in this worldly life, I will say I spent a lifetime cherishing and writing for you.',
+    poet: 'Dil Ki Pukaar',
+    theme: 'Eternal Devotion'
+  },
+  {
+    id: 'sh4',
     urduText: 'ہمیں تم سے محبت ہے، ہمارا دل یہ کہتا ہے\nجو تم بن زندگی سوچیں، تو سانسیں رک سی جاتی ہیں',
     romanUrdu: 'Hamein tum se mohabbat hai, hamara dil yeh kehta hai,\nJo tum bin zindagi sochein, toh saansein ruk si jaati hain.',
     englishMeaning: 'My heart whispers that I love you; the thought of life without you feels impossible to bear.',
@@ -111,7 +127,7 @@ export const ROMANTIC_SHAYARI: ShayariItem[] = [
     theme: 'Eternal Love'
   },
   {
-    id: 'sh3',
+    id: 'sh5',
     urduText: 'تمہارا نام لکھ کر دل پر ہم نے محفوظ کر لیا ہے\nاب اس دل میں کسی اور کے آنے کی گنجائش نہیں',
     romanUrdu: 'Tumhara naam likh kar dil par humne mehfooz kar liya hai,\nAb is dil mein kisi aur ke aane ki gunjaish nahi.',
     englishMeaning: 'Your name is carved and treasured deep in my heart; there is no room for anyone else.',
@@ -119,7 +135,7 @@ export const ROMANTIC_SHAYARI: ShayariItem[] = [
     theme: 'Loyalty & Truth'
   },
   {
-    id: 'sh4',
+    id: 'sh6',
     urduText: 'دعا میں مانگا ہے تجھے رب سے بارہا\nکاش بن جاؤ تم میری حیات کا حسین حصہ',
     romanUrdu: 'Dua mein manga hai tujhe Rabb se baar-ha,\nKaash ban jao tum meri hayat ka haseen hissa.',
     englishMeaning: 'I have asked for you from God countlessly in prayers; may you become the most beautiful part of my life.',

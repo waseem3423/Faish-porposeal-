@@ -30,29 +30,29 @@ export default function MusicPlayer() {
 
   return (
     <div className="fixed bottom-5 right-5 z-50">
-      <div className="glass-card rounded-full p-1.5 shadow-rose border border-rose-200/80 flex items-center gap-2 transition-all duration-300 hover:shadow-rose-lg">
+      <div className="glass-card-lilac rounded-full p-1.5 shadow-lilac border border-[#D0B6E1] flex items-center gap-2 transition-all duration-300 hover:shadow-lilac-lg">
         <button
           id="music-toggle-btn"
           onClick={toggleMusic}
           className={`flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold tracking-wide transition-all duration-300 cursor-pointer ${
             isPlaying
-              ? 'bg-gradient-to-r from-rose-500 to-pink-500 text-white shadow-md'
-              : 'bg-rose-100/90 hover:bg-rose-200/90 text-rose-800'
+              ? 'bg-[#1D1326] text-white shadow-md border border-[#D0B6E1]'
+              : 'bg-white hover:bg-[#FAF5FF] text-[#2E1840] border border-[#D0B6E1]'
           }`}
           title={isPlaying ? 'Pause Melody' : 'Play Romantic Melody'}
         >
           {isPlaying ? (
             <>
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D0B6E1] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D0B6E1]"></span>
               </span>
-              <Music className="w-3.5 h-3.5 animate-bounce" />
+              <Music className="w-3.5 h-3.5 text-[#D0B6E1] animate-bounce" />
               <span>Romantic Melody Playing</span>
             </>
           ) : (
             <>
-              <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-400" />
+              <Heart className="w-3.5 h-3.5 text-[#8E51B8] fill-[#D0B6E1]" />
               <span>Play Melody</span>
             </>
           )}
@@ -62,10 +62,10 @@ export default function MusicPlayer() {
           <button
             id="music-mute-btn"
             onClick={toggleMute}
-            className="p-2 rounded-full hover:bg-rose-100 text-rose-700 transition cursor-pointer"
+            className="p-2 rounded-full hover:bg-white text-[#2E1840] transition cursor-pointer"
             title={isMuted ? 'Unmute' : 'Mute'}
           >
-            {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
+            {isMuted ? <VolumeX className="w-4 h-4 text-[#8E51B8]" /> : <Volume2 className="w-4 h-4 text-[#8E51B8]" />}
           </button>
         )}
       </div>

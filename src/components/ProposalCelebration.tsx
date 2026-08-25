@@ -20,7 +20,7 @@ export default function ProposalCelebration({ proposerName, belovedName }: Propo
         particleCount: 20,
         spread: 70,
         origin: { y: 0.6 },
-        colors: ['#F43F5E', '#FB7185', '#F472B6', '#FDE047'],
+        colors: ['#D0B6E1', '#8E51B8', '#FAF5FF', '#1D1326', '#FFD700'],
       });
     }, 4000);
 
@@ -67,22 +67,22 @@ export default function ProposalCelebration({ proposerName, belovedName }: Propo
         transition={{ duration: 0.6 }}
         className="text-center mb-10"
       >
-        <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 text-white font-bold text-sm shadow-lg mb-4 animate-bounce">
-          <Sparkles className="w-4 h-4" />
-          <span>SHE SAID YES! 💕 FOREVER BEGINS TODAY</span>
-          <Sparkles className="w-4 h-4" />
+        <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-[#1D1326] text-white font-bold text-sm shadow-xl mb-4 animate-bounce border border-[#D0B6E1]">
+          <Sparkles className="w-4 h-4 text-[#D0B6E1]" />
+          <span>SHE SAID YES! 💍 KOMAL & FASIH FOREVER</span>
+          <Sparkles className="w-4 h-4 text-[#D0B6E1]" />
         </div>
 
-        <h1 className="text-4xl sm:text-6xl font-script text-[#6C172E] mb-2">
+        <h1 className="text-4xl sm:text-6xl font-script text-[#1D1326] mb-2">
           Muhammad Fasih & Komal Fatima
         </h1>
-        <p className="text-base sm:text-lg font-serif-luxury text-rose-800 italic">
+        <p className="text-base sm:text-lg font-serif-luxury text-[#5A406E] italic">
           Two souls, one heart, and a lifetime of beautiful moments.
         </p>
 
         {/* Live Together Timer */}
-        <div className="mt-4 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-100/90 text-rose-800 text-xs font-semibold">
-          <Clock className="w-3.5 h-3.5 text-rose-600" />
+        <div className="mt-4 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 border border-[#D0B6E1] text-[#2E1840] text-xs font-semibold shadow-xs">
+          <Clock className="w-3.5 h-3.5 text-[#8E51B8]" />
           <span>Our Story Officially: {timeTogether.minutes}m {timeTogether.seconds}s of pure happiness</span>
         </div>
       </motion.div>
@@ -93,93 +93,93 @@ export default function ProposalCelebration({ proposerName, belovedName }: Propo
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8 }}
         ref={certificateRef}
-        className="bg-white/95 rounded-3xl p-8 sm:p-14 border-8 border-double border-rose-200 shadow-2xl relative overflow-hidden text-center my-8"
+        className="bg-white rounded-3xl p-8 sm:p-14 border-8 border-double border-[#D0B6E1] shadow-2xl relative overflow-hidden text-center my-8"
       >
         {/* Corner floral watermarks */}
-        <div className="absolute top-4 left-4 text-rose-200 pointer-events-none">
-          <Heart className="w-10 h-10 fill-rose-100" />
+        <div className="absolute top-4 left-4 text-[#D0B6E1]/40 pointer-events-none">
+          <Heart className="w-10 h-10 fill-[#D0B6E1]/30" />
         </div>
-        <div className="absolute top-4 right-4 text-rose-200 pointer-events-none">
-          <Heart className="w-10 h-10 fill-rose-100" />
+        <div className="absolute top-4 right-4 text-[#D0B6E1]/40 pointer-events-none">
+          <Heart className="w-10 h-10 fill-[#D0B6E1]/30" />
         </div>
-        <div className="absolute bottom-4 left-4 text-rose-200 pointer-events-none">
-          <Heart className="w-10 h-10 fill-rose-100" />
+        <div className="absolute bottom-4 left-4 text-[#D0B6E1]/40 pointer-events-none">
+          <Heart className="w-10 h-10 fill-[#D0B6E1]/30" />
         </div>
-        <div className="absolute bottom-4 right-4 text-rose-200 pointer-events-none">
-          <Heart className="w-10 h-10 fill-rose-100" />
+        <div className="absolute bottom-4 right-4 text-[#D0B6E1]/40 pointer-events-none">
+          <Heart className="w-10 h-10 fill-[#D0B6E1]/30" />
         </div>
 
         {/* Certificate Header */}
         <div className="flex flex-col items-center justify-center mb-6">
-          <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-rose-500 to-pink-400 text-white flex items-center justify-center shadow-md mb-3">
-            <Award className="w-8 h-8" />
+          <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-[#1D1326] via-[#5C2B80] to-[#8E51B8] text-white flex items-center justify-center shadow-md mb-3 border border-[#D0B6E1]">
+            <Award className="w-8 h-8 text-[#FAF5FF]" />
           </div>
-          <span className="text-xs uppercase tracking-widest text-rose-500 font-bold">
+          <span className="text-xs uppercase tracking-widest text-[#8E51B8] font-bold">
             Official Keepsake
           </span>
-          <h2 className="text-2xl sm:text-4xl font-serif-luxury font-bold text-[#551625] tracking-wide mt-1">
+          <h2 className="text-2xl sm:text-4xl font-serif-luxury font-bold text-[#1D1326] tracking-wide mt-1">
             Certificate of Eternal Love & Promise
           </h2>
         </div>
 
-        <p className="text-xs sm:text-sm text-rose-600 font-serif-luxury italic mb-8 max-w-md mx-auto">
+        <p className="text-xs sm:text-sm text-[#5A406E] font-serif-luxury italic mb-8 max-w-md mx-auto">
           This certified token celebrates the joyful union and lifelong commitment between
         </p>
 
         {/* Proposer & Beloved Names */}
-        <div className="my-6 py-6 px-4 bg-rose-50/70 rounded-2xl border border-rose-200/80 max-w-xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+        <div className="my-6 py-6 px-4 bg-[#FAF7FD] rounded-2xl border border-[#D0B6E1] max-w-xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
           <div>
-            <span className="text-[11px] uppercase tracking-wider text-rose-400 font-semibold block">Groom at Heart</span>
-            <span className="text-2xl sm:text-3xl font-serif-luxury font-bold text-[#67172A]">{proposerName}</span>
+            <span className="text-[11px] uppercase tracking-wider text-[#8E51B8] font-bold block">Groom at Heart</span>
+            <span className="text-2xl sm:text-3xl font-serif-luxury font-bold text-[#1D1326]">{proposerName}</span>
           </div>
 
-          <div className="w-10 h-10 rounded-full bg-rose-500 text-white flex items-center justify-center shadow">
-            <Heart className="w-5 h-5 fill-white" />
+          <div className="w-10 h-10 rounded-full bg-[#1D1326] text-white flex items-center justify-center shadow border border-[#D0B6E1]">
+            <Heart className="w-5 h-5 fill-[#D0B6E1] text-[#D0B6E1]" />
           </div>
 
           <div>
-            <span className="text-[11px] uppercase tracking-wider text-rose-400 font-semibold block">Beloved Queen</span>
-            <span className="text-2xl sm:text-3xl font-serif-luxury font-bold text-[#67172A]">{belovedName}</span>
+            <span className="text-[11px] uppercase tracking-wider text-[#8E51B8] font-bold block">Beloved Queen</span>
+            <span className="text-2xl sm:text-3xl font-serif-luxury font-bold text-[#1D1326]">{belovedName}</span>
           </div>
         </div>
 
         {/* The Sacred Promises */}
-        <div className="my-8 text-left max-w-lg mx-auto space-y-3 font-serif-luxury text-sm text-[#481E27]">
+        <div className="my-8 text-left max-w-lg mx-auto space-y-3 font-serif-luxury text-sm text-[#2D1B3E]">
           <div className="flex items-center gap-3">
-            <Check className="w-4 h-4 text-rose-600 shrink-0" />
+            <Check className="w-4 h-4 text-[#8E51B8] shrink-0" />
             <span>To cherish, respect, and support each other through every step of life.</span>
           </div>
           <div className="flex items-center gap-3">
-            <Check className="w-4 h-4 text-rose-600 shrink-0" />
+            <Check className="w-4 h-4 text-[#8E51B8] shrink-0" />
             <span>To share endless laughter, warm conversations, and unshakeable loyalty.</span>
           </div>
           <div className="flex items-center gap-3">
-            <Check className="w-4 h-4 text-rose-600 shrink-0" />
+            <Check className="w-4 h-4 text-[#8E51B8] shrink-0" />
             <span>To always choose each other, today, tomorrow, and for all of eternity.</span>
           </div>
         </div>
 
         {/* Urdu Verse */}
-        <p className="font-urdu text-xl text-rose-900 leading-loose my-6" dir="rtl">
+        <p className="font-urdu text-xl text-[#1D1326] leading-loose my-6" dir="rtl">
           ”ہم نے تو بس تمہیں مانگا ہے رب سے، اب تم ساتھ رہنا زندگی بھر کے لیے۔“
         </p>
 
         {/* Date and Seal */}
-        <div className="mt-10 pt-6 border-t border-rose-200 flex flex-col sm:flex-row justify-between items-center gap-6 max-w-xl mx-auto">
+        <div className="mt-10 pt-6 border-t border-[#D0B6E1] flex flex-col sm:flex-row justify-between items-center gap-6 max-w-xl mx-auto">
           <div className="text-center sm:text-left">
-            <span className="text-[10px] uppercase font-bold text-rose-400 tracking-wider block">Date of Proposal</span>
-            <span className="text-sm font-semibold text-rose-900">{todayFormatted}</span>
+            <span className="text-[10px] uppercase font-bold text-[#8E51B8] tracking-wider block">Date of Proposal</span>
+            <span className="text-sm font-semibold text-[#1D1326]">{todayFormatted}</span>
           </div>
 
           {/* Golden Rose Seal */}
-          <div className="w-16 h-16 rounded-full border-2 border-amber-400 bg-gradient-to-tr from-amber-200 to-yellow-100 flex flex-col items-center justify-center shadow-inner text-amber-900">
-            <Heart className="w-5 h-5 fill-rose-500 text-rose-500" />
-            <span className="text-[8px] font-black tracking-tighter uppercase">FOREVER</span>
+          <div className="w-16 h-16 rounded-full border-2 border-[#D0B6E1] bg-gradient-to-tr from-[#1D1326] to-[#4A246B] flex flex-col items-center justify-center shadow-inner text-[#FAF5FF]">
+            <Heart className="w-5 h-5 fill-[#D0B6E1] text-[#D0B6E1]" />
+            <span className="text-[8px] font-black tracking-tighter uppercase text-[#FAF5FF]">FOREVER</span>
           </div>
 
           <div className="text-center sm:text-right">
-            <span className="text-[10px] uppercase font-bold text-rose-400 tracking-wider block">Status</span>
-            <span className="text-sm font-bold text-rose-600">Locked in Hearts 💕</span>
+            <span className="text-[10px] uppercase font-bold text-[#8E51B8] tracking-wider block">Status</span>
+            <span className="text-sm font-bold text-[#1D1326]">Locked in Hearts 💜</span>
           </div>
         </div>
       </motion.div>
@@ -189,18 +189,18 @@ export default function ProposalCelebration({ proposerName, belovedName }: Propo
         <button
           id="print-certificate-btn"
           onClick={handlePrint}
-          className="px-6 py-3 rounded-full bg-rose-600 hover:bg-rose-700 text-white text-sm font-semibold shadow-md flex items-center gap-2 transition cursor-pointer"
+          className="px-6 py-3 rounded-full bg-[#1D1326] hover:bg-[#2A1B38] text-white text-sm font-semibold shadow-md flex items-center gap-2 transition cursor-pointer border border-[#D0B6E1]"
         >
-          <Printer className="w-4 h-4" />
+          <Printer className="w-4 h-4 text-[#D0B6E1]" />
           <span>Print / Save Keepsake</span>
         </button>
 
         <button
           id="share-link-btn"
           onClick={handleShare}
-          className="px-6 py-3 rounded-full bg-white/90 hover:bg-rose-50 text-rose-800 text-sm font-semibold border border-rose-200 shadow-sm flex items-center gap-2 transition cursor-pointer"
+          className="px-6 py-3 rounded-full bg-white hover:bg-[#FAF7FD] text-[#1D1326] text-sm font-semibold border border-[#D0B6E1] shadow-sm flex items-center gap-2 transition cursor-pointer"
         >
-          {copied ? <Check className="w-4 h-4 text-green-600" /> : <Share2 className="w-4 h-4" />}
+          {copied ? <Check className="w-4 h-4 text-green-600" /> : <Share2 className="w-4 h-4 text-[#8E51B8]" />}
           <span>{copied ? 'Link Copied to Clipboard!' : 'Share Love Story'}</span>
         </button>
       </div>

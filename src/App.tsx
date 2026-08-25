@@ -26,7 +26,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FFF8F9] text-[#4A202A] relative selection:bg-pink-300 selection:text-pink-900">
+    <div className="min-h-screen bg-[#FAF7FD] text-[#1D1326] relative selection:bg-[#D0B6E1] selection:text-[#1D1326]">
       {/* Background Floating Petals and Light Particles */}
       <FloatingPetals />
 
@@ -60,10 +60,10 @@ export default function App() {
           >
             {/* Top Navigation Pill */}
             <header className="sticky top-4 z-40 max-w-xl mx-auto px-4">
-              <div className="glass-card rounded-full px-5 py-2.5 shadow-rose border border-rose-200/80 flex items-center justify-between">
+              <div className="glass-card-lilac rounded-full px-5 py-2.5 shadow-lilac border border-[#D0B6E1] flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <Heart className="w-4 h-4 text-rose-500 fill-rose-500 animate-pulse" />
-                  <span className="text-xs sm:text-sm font-serif-luxury font-bold text-[#6B1E32]">
+                  <Heart className="w-4 h-4 text-[#8E51B8] fill-[#D0B6E1] animate-pulse" />
+                  <span className="text-xs sm:text-sm font-serif-luxury font-bold text-[#1D1326]">
                     {proposerName} & {belovedName}
                   </span>
                 </div>
@@ -73,16 +73,16 @@ export default function App() {
                     <button
                       id="nav-proposal-jump-btn"
                       onClick={scrollToProposal}
-                      className="px-3.5 py-1.5 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 text-white text-xs font-semibold shadow-sm hover:shadow transition flex items-center gap-1 cursor-pointer"
+                      className="px-3.5 py-1.5 rounded-full bg-[#1D1326] text-white text-xs font-semibold shadow-sm hover:bg-[#2F1E40] transition flex items-center gap-1 cursor-pointer border border-[#D0B6E1]"
                     >
                       <span>The Big Question</span>
-                      <Sparkles className="w-3 h-3" />
+                      <Sparkles className="w-3 h-3 text-[#D0B6E1]" />
                     </button>
                   )}
                   {hasAccepted && (
-                    <span className="px-3 py-1 rounded-full bg-pink-100 text-pink-800 text-xs font-bold flex items-center gap-1">
-                      <Heart className="w-3 h-3 fill-pink-600 text-pink-600" />
-                      <span>Forever ❤️</span>
+                    <span className="px-3 py-1 rounded-full bg-[#FAF5FF] border border-[#D0B6E1] text-[#1D1326] text-xs font-bold flex items-center gap-1">
+                      <Heart className="w-3 h-3 fill-[#D0B6E1] text-[#8E51B8]" />
+                      <span>Forever 💜</span>
                     </span>
                   )}
                 </div>
@@ -96,17 +96,17 @@ export default function App() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.7 }}
               >
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pink-100/80 border border-pink-200 text-pink-800 text-xs font-medium mb-4">
-                  <Sparkles className="w-3.5 h-3.5 text-pink-500" />
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 border border-[#D0B6E1] text-[#2E1840] text-xs font-semibold mb-4 shadow-xs">
+                  <Sparkles className="w-3.5 h-3.5 text-[#8E51B8]" />
                   <span>A Dedicated Love Letter & Journey</span>
-                  <Sparkles className="w-3.5 h-3.5 text-pink-500" />
+                  <Sparkles className="w-3.5 h-3.5 text-[#8E51B8]" />
                 </div>
 
-                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-script text-[#741A32] mb-3">
+                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-script text-[#1D1326] mb-3">
                   For My Beloved {belovedName}
                 </h1>
 
-                <p className="text-base sm:text-xl font-serif-luxury text-rose-800/90 italic max-w-2xl mx-auto">
+                <p className="text-base sm:text-xl font-serif-luxury text-[#5A406E] italic max-w-2xl mx-auto">
                   “Dil ki har ek dharkan pe tera hi naam likha hai...”
                 </p>
 
@@ -116,7 +116,7 @@ export default function App() {
                       const letterEl = document.querySelector('section');
                       letterEl?.scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="inline-flex items-center gap-1.5 text-xs text-rose-500 hover:text-rose-700 font-semibold cursor-pointer animate-bounce"
+                    className="inline-flex items-center gap-1.5 text-xs text-[#8E51B8] hover:text-[#1D1326] font-semibold cursor-pointer animate-bounce"
                   >
                     <span>Scroll to read</span>
                     <ArrowDown className="w-3.5 h-3.5" />
@@ -152,16 +152,16 @@ export default function App() {
             )}
 
             {/* Footer */}
-            <footer className="py-12 px-4 text-center border-t border-rose-200/60 mt-16">
+            <footer className="py-12 px-4 text-center border-t border-[#D0B6E1]/50 mt-16">
               <div className="flex flex-col items-center justify-center gap-2">
-                <div className="flex items-center gap-2 text-rose-500">
-                  <Heart className="w-4 h-4 fill-rose-400" />
-                  <span className="font-script text-2xl text-[#6D1B30]">
+                <div className="flex items-center gap-2 text-[#8E51B8]">
+                  <Heart className="w-4 h-4 fill-[#D0B6E1] text-[#8E51B8]" />
+                  <span className="font-script text-2xl text-[#1D1326]">
                     {proposerName} & {belovedName}
                   </span>
-                  <Heart className="w-4 h-4 fill-rose-400" />
+                  <Heart className="w-4 h-4 fill-[#D0B6E1] text-[#8E51B8]" />
                 </div>
-                <p className="text-xs text-rose-700/70 font-serif-luxury italic">
+                <p className="text-xs text-[#5A406E] font-serif-luxury italic">
                   Crafted with eternal affection, respect & sincere prayers for Komal Fatima
                 </p>
               </div>
