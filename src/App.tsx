@@ -9,7 +9,6 @@ import RomanticMoments from './components/RomanticMoments';
 import RomanticShayari from './components/RomanticShayari';
 import TheBigQuestion from './components/TheBigQuestion';
 import ProposalCelebration from './components/ProposalCelebration';
-import MusicPlayer from './components/MusicPlayer';
 import { DEFAULT_PROPOSER, DEFAULT_BELOVED } from './data/romanticContent';
 
 export default function App() {
@@ -29,9 +28,6 @@ export default function App() {
     <div className="min-h-screen bg-[#FAF7FD] text-[#1D1326] relative selection:bg-[#D0B6E1] selection:text-[#1D1326]">
       {/* Background Floating Petals and Light Particles */}
       <FloatingPetals />
-
-      {/* Floating Ambient Music Controller */}
-      <MusicPlayer />
 
       <AnimatePresence mode="wait">
         {!hasOpened ? (

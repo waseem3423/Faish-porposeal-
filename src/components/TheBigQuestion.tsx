@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'motion/react';
 import confetti from 'canvas-confetti';
 import { Heart, Sparkles, AlertCircle } from 'lucide-react';
 import { PLAYFUL_NO_RESPONSES } from '../data/romanticContent';
-import { romanticAudio } from '../utils/audioSynth';
 import { proposalVoice } from '../utils/voicePlayer';
 
 interface TheBigQuestionProps {
@@ -63,12 +62,6 @@ export default function TheBigQuestion({ proposerName, belovedName, onAccepted }
     triggerFireworks();
     // Play voice note uploaded by the user
     proposalVoice.play();
-    
-    // Play celebratory bell flourish
-    romanticAudio.playTone(523.25, 0.5, 'bell');
-    setTimeout(() => romanticAudio.playTone(659.25, 0.5, 'bell'), 150);
-    setTimeout(() => romanticAudio.playTone(783.99, 0.8, 'bell'), 300);
-    setTimeout(() => romanticAudio.playTone(1046.5, 1.2, 'bell'), 450);
 
     onAccepted();
   };

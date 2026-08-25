@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Heart, Sparkles, Send, Lock } from 'lucide-react';
-import { romanticAudio } from '../utils/audioSynth';
 
 interface EnvelopeIntroProps {
   onOpen: () => void;
@@ -15,8 +14,6 @@ export default function EnvelopeIntro({ onOpen, proposerName, belovedName }: Env
 
   const handleOpen = () => {
     setIsOpening(true);
-    // Start ambient music smoothly on user gesture
-    romanticAudio.start();
     setTimeout(() => {
       onOpen();
     }, 1200);
