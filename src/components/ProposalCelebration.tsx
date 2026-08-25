@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { Heart, Sparkles, Award, Download, Share2, Check, Printer, Clock, Play, Pause, RotateCcw, Volume2 } from 'lucide-react';
+import { Heart, Sparkles, Award, Download, Share2, Check, Printer, Clock } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { proposalVoice } from '../utils/voicePlayer';
 
@@ -13,16 +13,10 @@ export default function ProposalCelebration({ proposerName, belovedName }: Propo
   const certificateRef = useRef<HTMLDivElement>(null);
   const [copied, setCopied] = useState(false);
   const [timeTogether, setTimeTogether] = useState({ seconds: 0, minutes: 0, hours: 0 });
-  const [voiceState, setVoiceState] = useState({ isPlaying: false, currentTime: 0, duration: 0 });
 
   useEffect(() => {
-    // Ensure voice is playing
+    // Ensure voice is playing smoothly in background
     proposalVoice.resume();
-
-    // Subscribe to voice state updates
-    const unsubscribe = proposalVoice.subscribe((state) => {
-      setVoiceState(state);
-    });
 
     // Continuous light celebratory burst
     const timer = setInterval(() => {
@@ -45,7 +39,6 @@ export default function ProposalCelebration({ proposerName, belovedName }: Propo
     }, 1000);
 
     return () => {
-      unsubscribe();
       clearInterval(timer);
       clearInterval(clockTimer);
     };
@@ -96,86 +89,6 @@ export default function ProposalCelebration({ proposerName, belovedName }: Propo
           <Clock className="w-3.5 h-3.5 text-[#8E51B8]" />
           <span>Our Story Officially: {timeTogether.minutes}m {timeTogether.seconds}s of pure happiness</span>
         </div>
-
-        {/* Romantic Voice Note Player Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="mt-6 max-w-md mx-auto p-4 sm:p-5 rounded-2xl bg-white/95 border-2 border-[#D0B6E1] shadow-lilac flex flex-col gap-3 text-left"
-        >
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <span className="w-3 h-3 rounded-full bg-[#8E51B8] animate-ping" />
-              <span className="text-xs font-bold uppercase tracking-wider text-[#1D1326]">
-                🎙️ Special Voice Message for Komal
-              </span>
-            </div>
-            <span className="text-[11px] font-medium text-[#8E51B8]">
-              {voiceState.isPlaying ? 'Playing Now 🎶' : 'Click to Play'}
-            </span>
-          </div>
-
-          <div className="flex items-center gap-3 bg-[#FAF7FD] p-3 rounded-xl border border-[#D0B6E1]/50">
-            {/* Play/Pause Button */}
-            <button
-              id="voice-toggle-btn"
-              onClick={() => proposalVoice.toggle()}
-              className="w-12 h-12 rounded-full bg-[#1D1326] hover:bg-[#321746] text-white flex items-center justify-center shadow-md transition-all active:scale-95 border border-[#D0B6E1] shrink-0 cursor-pointer"
-              title={voiceState.isPlaying ? 'Pause Voice Note' : 'Play Voice Note'}
-            >
-              {voiceState.isPlaying ? (
-                <Pause className="w-5 h-5 fill-white text-white" />
-              ) : (
-                <Play className="w-5 h-5 fill-white text-white ml-0.5" />
-              )}
-            </button>
-
-            {/* Audio Wave Bars Simulation & Progress */}
-            <div className="flex-1">
-              <div className="flex items-center gap-1 h-7 mb-1">
-                {[40, 75, 55, 90, 60, 100, 70, 85, 45, 95, 65, 80, 50, 70, 90, 60, 45].map((height, i) => (
-                  <motion.span
-                    key={i}
-                    animate={
-                      voiceState.isPlaying
-                        ? { scaleY: [0.3, 1, 0.4], opacity: [0.6, 1, 0.6] }
-                        : { scaleY: 0.35, opacity: 0.5 }
-                    }
-                    transition={{
-                      repeat: Infinity,
-                      duration: 0.6 + (i % 5) * 0.15,
-                      ease: 'easeInOut',
-                    }}
-                    style={{ height: `${height}%` }}
-                    className="w-1 rounded-full bg-[#8E51B8] origin-bottom inline-block"
-                  />
-                ))}
-              </div>
-              <div className="flex justify-between text-[10px] text-[#5A406E] font-medium">
-                <span>
-                  {Math.floor(voiceState.currentTime / 60)}:
-                  {Math.floor(voiceState.currentTime % 60).toString().padStart(2, '0')}
-                </span>
-                <span>
-                  {voiceState.duration > 0
-                    ? `${Math.floor(voiceState.duration / 60)}:${Math.floor(voiceState.duration % 60).toString().padStart(2, '0')}`
-                    : 'Voice Note'}
-                </span>
-              </div>
-            </div>
-
-            {/* Replay Button */}
-            <button
-              id="voice-replay-btn"
-              onClick={() => proposalVoice.play()}
-              className="p-2.5 rounded-full hover:bg-white text-[#1D1326] border border-[#D0B6E1]/60 transition-colors shadow-xs cursor-pointer"
-              title="Replay from start"
-            >
-              <RotateCcw className="w-4 h-4 text-[#8E51B8]" />
-            </button>
-          </div>
-        </motion.div>
       </motion.div>
 
       {/* Printable / Savable Love Certificate */}
